@@ -16,7 +16,9 @@ using namespace std;
 
 void display(int A[], int n){ // as the A here is pointer, we can pass *A as well
     // but it a general way of pointer representation, to depict it as array for other people
-    // to understand we keep it as given. 
+    // to understand we keep it as given.
+    A[0] = 97; // Check the output to see the change in actual parameter. i.e A[0]
+    // Hence it is pass by address always with an array.
     cout<<A<<endl;
     for (int i=0; i<n; i++) {
         cout<<A[i]<<endl;
