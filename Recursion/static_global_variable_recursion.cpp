@@ -13,7 +13,8 @@ using namespace std;
 
 // int x = 5 // Global Variable
 // There will only one copy of static/global created
-// number of copies are created for other types of variable.
+// number of copies are created for other types of variable for each function call activation
+// record.
 
 int func1(int n){
     static int x;
