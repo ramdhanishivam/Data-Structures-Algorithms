@@ -41,7 +41,7 @@ int main() {
     int x = 3;
     func1(x);
     cout<<endl;
-    func1(x);
+    func2(x);
     cout<<endl;
     return 0;
 }
