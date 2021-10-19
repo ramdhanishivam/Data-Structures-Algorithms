@@ -1,10 +1,9 @@
 # Data-Structures-Algorithms
-Complete Reference to C &amp; C++ Programs of Data Structures &amp; Algorithms.
+Reference to C &amp; C++ Programs of Data Structures &amp; Algorithms.
+I've added needed detailed explaination for concepts in the program comments.
 
-**->** This repository is will help any programmer who wish to master the **Data Structure Concepts** of Core Computer Science Programming.
+FYI I keep on revising the repo content according to my studies. But one can surely begin with the available programs. Reach out to me, if we can discuss any particluar problem.
 
-**->** I've added needed detailed explaination for basic concepts of C & C++ in the program comments. 
+Happy Programming.
 
-**->** One can view or practice the basics of programming with C & C++.
-
-NOTE - The programs aren't completely added to the repo. But one can surely begin with the available programs.
+With Purpose.
