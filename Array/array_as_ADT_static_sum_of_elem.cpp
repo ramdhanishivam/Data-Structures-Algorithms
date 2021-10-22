@@ -34,9 +34,15 @@ int sum_of_all(struct Array arr){
     return sum;
 }
 
+float average(struct Array arr){
+    return (float)sum_of_all(arr)/arr.length;
+}
+
 int main() {
     struct Array arr={{2,1,2,12,3}, 20, 5};
     cout<<"Sum of all elememnts : "<<sum_of_all(arr);
+    cout<<endl;
+    cout<<"Average : "<<average(arr);
     display(arr);
     return 0;
 }
