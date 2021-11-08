@@ -67,6 +67,23 @@ int count_LL_leng_recursive(struct Node *linked_list_node){
     }
 }
 
+int sum_of_elements(struct Node *linked_list_node){
+    int sum = 0;
+    while (linked_list_node) {
+        sum += linked_list_node->data;
+        linked_list_node = linked_list_node->next;
+    }
+    return sum;
+}
+
+int sum_of_elements_recursive(struct Node *linked_list_node){
+    if (linked_list_node) {
+        return sum_of_elements_recursive(linked_list_node->next) + linked_list_node->data;
+    } else {
+        return 0;
+    }
+}
+
 int main()
 {
     int A[]={3,5,7,10,25,8,32,2};
@@ -78,6 +95,10 @@ int main()
     cout<<"Length : "<<count_LL_leng(first);
     cout<<endl;
     cout<<"Length with Recursive Approach : "<<count_LL_leng_recursive(first);
+    cout<<endl;
+    cout<<"Sum of all elements : "<<sum_of_elements(first);
+    cout<<endl;
+    cout<<"Sum of all elements with Recursive Approach : "<<sum_of_elements_recursive(first);
     cout<<endl;
     return 0;
 }
