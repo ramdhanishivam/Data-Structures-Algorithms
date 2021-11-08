@@ -50,6 +50,23 @@ void display_recursive(struct Node *linked_list_node)
     }
 }
 
+int count_LL_leng(struct Node *linked_list_node){
+    int length = 0;
+    while (linked_list_node) {
+        length++;
+        linked_list_node = linked_list_node->next;
+    }
+    return length;
+}
+
+int count_LL_leng_recursive(struct Node *linked_list_node){
+    if (linked_list_node) {
+        return count_LL_leng_recursive( linked_list_node->next ) + 1;
+    } else {
+        return 0;
+    }
+}
+
 int main()
 {
     int A[]={3,5,7,10,25,8,32,2};
@@ -57,6 +74,10 @@ int main()
     display(first);
     cout<<endl;
     display_recursive(first);
+    cout<<endl;
+    cout<<"Length : "<<count_LL_leng(first);
+    cout<<endl;
+    cout<<"Length with Recursive Approach : "<<count_LL_leng_recursive(first);
     cout<<endl;
     return 0;
 }
