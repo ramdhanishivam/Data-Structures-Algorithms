@@ -42,11 +42,21 @@ void display(struct Node *linked_list_node)
     }
 }
 
+void display_recursive(struct Node *linked_list_node)
+{
+    if (linked_list_node) {
+        cout<<linked_list_node->data<<",";
+        display_recursive( linked_list_node->next );
+    }
+}
+
 int main()
 {
     int A[]={3,5,7,10,25,8,32,2};
     create(A, 8);
     display(first);
+    cout<<endl;
+    display_recursive(first);
     cout<<endl;
     return 0;
 }
