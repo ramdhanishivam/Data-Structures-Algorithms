@@ -84,6 +84,26 @@ int sum_of_elements_recursive(struct Node *linked_list_node){
     }
 }
 
+int max_of_elements(struct Node *linked_list_node){
+    int maximum = INT32_MIN;
+    while (linked_list_node) {
+        if (linked_list_node->data > maximum) {
+            maximum = linked_list_node->data;
+        }
+        linked_list_node = linked_list_node->next;
+    }
+    return maximum;
+}
+
+int max_of_elements_recursive(struct Node *linked_list_node){
+    int maximum = 0;
+    if (linked_list_node == 0) {
+        return INT32_MIN;
+    }
+    maximum = max_of_elements_recursive(linked_list_node->next);
+    return maximum > linked_list_node->data ? maximum : linked_list_node->data;
+}
+
 int main()
 {
     int A[]={3,5,7,10,25,8,32,2};
@@ -99,6 +119,10 @@ int main()
     cout<<"Sum of all elements : "<<sum_of_elements(first);
     cout<<endl;
     cout<<"Sum of all elements with Recursive Approach : "<<sum_of_elements_recursive(first);
+    cout<<endl;
+    cout<<"Max of all elements : "<<max_of_elements(first);
+    cout<<endl;
+    cout<<"Max of all elements with Recursive Approach : "<<max_of_elements_recursive(first);
     cout<<endl;
     return 0;
 }
